@@ -77,33 +77,19 @@ function updatePage() {
                 continue;
             solved.add(`http://codeforces.com/problemset/problem/${item.problem.contestId}/${item.problem.index}`)
         }
-        if (page == "Ladders.html" || page == "Categories.html") {
-            let links = page_data[page];
 
-            for (let item of links) {
-                let solved_count = 0;
-                for (let problem_link of page_data[item]) {
-                    if (solved.has(problem_link)) {
-                        solved_count += 1
-                    }
-                }
-                let text = $(`td > a[href="${item}"]`).parent().html();
-                let solved_percent = Math.floor((solved_count * 100) / page_data[item].length);
-                $(`td > a[href="${item}"]`).parent().html(`<div style="position:relative;padding:0;margin:0"><div style="margin-left:-6px;padding-left:2px;margin-top:-6px;position:absolute;z-index:-1;background-color:lightgreen;float:left;height:8px;width:${solved_percent}%;font-size:8px;text-align:left;">${solved_count}</div> ${text}</div>`);
-            }
-        } else {
-            for (let element of $("td > a")) {
-                if (solved.has($(element).attr("href"))) {
-                    $(element).parent().parent().css("background-color", "lightgreen")
-                }
+        for (let element of $("td > a")) {
+            if (solved.has($(element).attr("href"))) {
+                $(element).parent().parent().css("background-color", "lightgreen")
             }
         }
+
     })
 
 }
 
 function startService() {
-    let problem_tree = "./data.json";
+    let problem_tree = "./js/data.json";
     $.getJSON(problem_tree, (data, status) => {
         page_data = data
         updatePage()
@@ -114,10 +100,10 @@ function startService() {
 function validateUsername(username) {
     let url = `https://codeforces.com/api/user.info?handles=${username}`
     let timer = setTimeout(() => {
-        username = prompt("Some error while setting username, please re-enter")
-        validateUsername(username)
-    }, 5000)
-    gtag('set', { 'user_id': username });
+            username = prompt("Some error while setting username, please re-enter")
+            validateUsername(username)
+        }, 5000)
+        // gtag('set', { 'user_id': username });
     $.getJSON(url, (data, status) => {
         console.log(data, status)
         clearInterval(timer)
@@ -126,7 +112,7 @@ function validateUsername(username) {
     })
 }
 
-loadScript("https://code.jquery.com/jquery-3.4.1.min.js", () => {
+loadScript("https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js", () => {
     $(document).ready(function() {
         let username = getCookie("cf_username");
         if (!username) {
