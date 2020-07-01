@@ -114,10 +114,10 @@ function startService() {
 function validateUsername(username) {
     let url = `https://codeforces.com/api/user.info?handles=${username}`
     let timer = setTimeout(() => {
-            username = prompt("Some error while setting username, please re-enter")
-            validateUsername(username)
-        }, 5000)
-        // gtag('set', { 'user_id': username });
+        username = prompt("Some error while setting username, please re-enter")
+        validateUsername(username)
+    }, 5000)
+    gtag('set', { 'user_id': username });
     $.getJSON(url, (data, status) => {
         console.log(data, status)
         clearInterval(timer)

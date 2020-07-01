@@ -1,220 +1,220 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <link rel="icon" type="image/ico" href="//bobby285271.coding.net/p/img/d/img/git/raw/master/favicon.ico">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Codeforces Ladders - Dasyatis</title>
-    <link rel="stylesheet" href="//cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>仪表盘 - Dasyatis</title>
+    <link rel="stylesheet" href="//cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css">
-    <link rel="stylesheet" href="css/dasyatis.css">
-    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-    <script src="//cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="//cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="fetcher.js"></script>
-    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <title>A2OJ Ladders</title>
+    <script src="//cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdn.staticfile.org/popper.js/2.4.2/umd/popper.min.js"></script>
+    <script src="//cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <meta name="theme-color" content="#563d7c">
+
+
     <style>
-        table,
-        th,
-        td {
-            border: 1px solid black;
-            border-collapse: collapse;
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
         
-        th,
-        td {
-            padding: 5px;
-            text-align: center;
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
         }
     </style>
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-16947566-3']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
-                'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
 </head>
 
 <body>
-    <script src="fetcher.js"></script>
-    <center>
-        <font size=4>
-            <b>
-				<u>
-					Practice Ladders</u></b></font><br /><br />
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Problems Count</th>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td><a href="Ladder11.html">Codeforces Rating &lt; 1300</a></td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td><a href="Ladder12.html">1300 &lt;= Codeforces Rating &lt;= 1399</a></td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>13</td>
-                <td><a href="Ladder13.html">1400 &lt;= Codeforces Rating &lt;= 1499</a></td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>14</td>
-                <td><a href="Ladder14.html">1500 &lt;= Codeforces Rating &lt;= 1599</a></td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>15</td>
-                <td><a href="Ladder15.html">1600 &lt;= Codeforces Rating &lt;= 1699</a></td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>16</td>
-                <td><a href="Ladder16.html">1700 &lt;= Codeforces Rating &lt;= 1799</a></td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>17</td>
-                <td><a href="Ladder17.html">1800 &lt;= Codeforces Rating &lt;= 1899</a></td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>18</td>
-                <td><a href="Ladder18.html">1900 &lt;= Codeforces Rating &lt;= 1999</a></td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>19</td>
-                <td><a href="Ladder19.html">2000 &lt;= Codeforces Rating &lt;= 2099</a></td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>20</td>
-                <td><a href="Ladder20.html">2100 &lt;= Codeforces Rating &lt;= 2199</a></td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>21</td>
-                <td><a href="Ladder21.html">Codeforces Rating &gt;= 2200</a></td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>22</td>
-                <td><a href="Ladder22.html">Codeforces Rating &lt; 1300 (Extra)</a></td>
-                <td>200</td>
-            </tr>
-            <tr>
-                <td>23</td>
-                <td><a href="Ladder23.html">1300 &lt;= Codeforces Rating &lt;= 1399 (Extra)</a></td>
-                <td>200</td>
-            </tr>
-            <tr>
-                <td>24</td>
-                <td><a href="Ladder24.html">1400 &lt;= Codeforces Rating &lt;= 1499 (Extra)</a></td>
-                <td>200</td>
-            </tr>
-            <tr>
-                <td>25</td>
-                <td><a href="Ladder25.html">1500 &lt;= Codeforces Rating &lt;= 1599 (Extra)</a></td>
-                <td>200</td>
-            </tr>
-            <tr>
-                <td>26</td>
-                <td><a href="Ladder26.html">1600 &lt;= Codeforces Rating &lt;= 1699 (Extra)</a></td>
-                <td>200</td>
-            </tr>
-            <tr>
-                <td>27</td>
-                <td><a href="Ladder27.html">1700 &lt;= Codeforces Rating &lt;= 1799 (Extra)</a></td>
-                <td>200</td>
-            </tr>
-            <tr>
-                <td>28</td>
-                <td><a href="Ladder28.html">1800 &lt;= Codeforces Rating &lt;= 1899 (Extra)</a></td>
-                <td>200</td>
-            </tr>
-            <tr>
-                <td>29</td>
-                <td><a href="Ladder29.html">1900 &lt;= Codeforces Rating &lt;= 1999 (Extra)</a></td>
-                <td>200</td>
-            </tr>
-            <tr>
-                <td>30</td>
-                <td><a href="Ladder30.html">2000 &lt;= Codeforces Rating &lt;= 2099 (Extra)</a></td>
-                <td>200</td>
-            </tr>
-            <tr>
-                <td>31</td>
-                <td><a href="Ladder31.html">2100 &lt;= Codeforces Rating &lt;= 2199 (Extra)</a></td>
-                <td>200</td>
-            </tr>
-            <tr>
-                <td>32</td>
-                <td><a href="Ladder32.html">Codeforces Rating &gt;= 2200 (Extra)</a></td>
-                <td>200</td>
-            </tr>
-        </table>
-        <br /><br />
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Problems Count</th>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td><a href="Ladder4.html">Codeforces Div. 2, A</a></td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td><a href="Ladder5.html">Codeforces Div. 2, B</a></td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td><a href="Ladder6.html">Codeforces Div. 2, C</a></td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td><a href="Ladder7.html">Codeforces Div. 2, D</a></td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td><a href="Ladder8.html">Codeforces Div. 2, E</a></td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td><a href="Ladder9.html">Codeforces Div. 1, D</a></td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td><a href="Ladder10.html">Codeforces Div. 1, E</a></td>
-                <td>100</td>
-            </tr>
-        </table>
-    </center>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="../">Dasyatis · Codeforces Ladders</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#">Sign out</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div id="sidebar"></div>
+            <script>
+                $("#sidebar").load("html/sidebar.html");
+            </script>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">仪表盘</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group mr-2">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                            <span data-feather="calendar"></span>
+                            This week
+                        </button>
+                    </div>
+                </div>
+
+                <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+
+                <h2>Section title</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped table-sm">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Header</th>
+                                <th>Header</th>
+                                <th>Header</th>
+                                <th>Header</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1,001</td>
+                                <td>Lorem</td>
+                                <td>ipsum</td>
+                                <td>dolor</td>
+                                <td>sit</td>
+                            </tr>
+                            <tr>
+                                <td>1,002</td>
+                                <td>amet</td>
+                                <td>consectetur</td>
+                                <td>adipiscing</td>
+                                <td>elit</td>
+                            </tr>
+                            <tr>
+                                <td>1,003</td>
+                                <td>Integer</td>
+                                <td>nec</td>
+                                <td>odio</td>
+                                <td>Praesent</td>
+                            </tr>
+                            <tr>
+                                <td>1,003</td>
+                                <td>libero</td>
+                                <td>Sed</td>
+                                <td>cursus</td>
+                                <td>ante</td>
+                            </tr>
+                            <tr>
+                                <td>1,004</td>
+                                <td>dapibus</td>
+                                <td>diam</td>
+                                <td>Sed</td>
+                                <td>nisi</td>
+                            </tr>
+                            <tr>
+                                <td>1,005</td>
+                                <td>Nulla</td>
+                                <td>quis</td>
+                                <td>sem</td>
+                                <td>at</td>
+                            </tr>
+                            <tr>
+                                <td>1,006</td>
+                                <td>nibh</td>
+                                <td>elementum</td>
+                                <td>imperdiet</td>
+                                <td>Duis</td>
+                            </tr>
+                            <tr>
+                                <td>1,007</td>
+                                <td>sagittis</td>
+                                <td>ipsum</td>
+                                <td>Praesent</td>
+                                <td>mauris</td>
+                            </tr>
+                            <tr>
+                                <td>1,008</td>
+                                <td>Fusce</td>
+                                <td>nec</td>
+                                <td>tellus</td>
+                                <td>sed</td>
+                            </tr>
+                            <tr>
+                                <td>1,009</td>
+                                <td>augue</td>
+                                <td>semper</td>
+                                <td>porta</td>
+                                <td>Mauris</td>
+                            </tr>
+                            <tr>
+                                <td>1,010</td>
+                                <td>massa</td>
+                                <td>Vestibulum</td>
+                                <td>lacinia</td>
+                                <td>arcu</td>
+                            </tr>
+                            <tr>
+                                <td>1,011</td>
+                                <td>eget</td>
+                                <td>nulla</td>
+                                <td>Class</td>
+                                <td>aptent</td>
+                            </tr>
+                            <tr>
+                                <td>1,012</td>
+                                <td>taciti</td>
+                                <td>sociosqu</td>
+                                <td>ad</td>
+                                <td>litora</td>
+                            </tr>
+                            <tr>
+                                <td>1,013</td>
+                                <td>torquent</td>
+                                <td>per</td>
+                                <td>conubia</td>
+                                <td>nostra</td>
+                            </tr>
+                            <tr>
+                                <td>1,014</td>
+                                <td>per</td>
+                                <td>inceptos</td>
+                                <td>himenaeos</td>
+                                <td>Curabitur</td>
+                            </tr>
+                            <tr>
+                                <td>1,015</td>
+                                <td>sodales</td>
+                                <td>ligula</td>
+                                <td>in</td>
+                                <td>libero</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')
+    </script>
+
+    <script src="dashboard.js"></script>
 </body>
+
+
+<script>
+    $("#indexpart").addClass("active");
+</script>
 
 </html>
