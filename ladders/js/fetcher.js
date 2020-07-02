@@ -72,16 +72,24 @@ function updatePage() {
     let url = `https://codeforces.com/api/user.status?handle=${username}`;
     $.getJSON(url, (data, status) => {
         let solved = new Set();
+        let unsolved = new Set();
         for (let item of data.result) {
-            if (item.verdict != "OK")
-                continue;
-            solved.add(`http://codeforces.com/problemset/problem/${item.problem.contestId}/${item.problem.index}`)
+            if (item.verdict == "OK") {
+                solved.add(`http://codeforces.com/problemset/problem/${item.problem.contestId}/${item.problem.index}`)
+            } else {
+                // alert("test");
+                unsolved.add(`http://codeforces.com/problemset/problem/${item.problem.contestId}/${item.problem.index}`)
+            }
+
         }
 
         for (let element of $("td > a")) {
             if (solved.has($(element).attr("href"))) {
                 $(element).parent().parent().css("background-color", "lightgreen")
+            } else if (unsolved.has($(element).attr("href"))) {
+                $(element).parent().parent().css("background-color", "pink")
             }
+
         }
 
     })

@@ -15,22 +15,7 @@
     <meta name="theme-color" content="#563d7c">
 
 
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
+
     <!-- Custom styles for this template -->
     <link href="css/dashboard.css" rel="stylesheet">
     <script src="js/fetcher.js"></script>
@@ -47,6 +32,7 @@
             <li class="nav-item text-nowrap">
                 <a class="nav-link" href="#">Sign out</a>
             </li>
+
         </ul>
     </nav>
 
@@ -62,6 +48,12 @@
                 <div class="card">
                     <div class="card-body">
                         <h2>题单五 (1600~1699)</h2><br />本题单适合 Codeforces 比赛 Rating 介于 1600 和 1699 的人，Have fun！
+                    </div>
+                    <div class="d-none d-lg-block">
+                        <div id="submitcode"></div>
+                        <script>
+                            $("#submitcode").load("html/submitcode.html");
+                        </script>
                     </div>
                 </div>
                 <br />
