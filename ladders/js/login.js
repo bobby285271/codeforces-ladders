@@ -2,7 +2,7 @@ function validateUsername(username) {
     $("#loginstatus").html("<div class=\"alert alert-info\"><strong>请稍候：</strong>正在查询用户信息，这可能需要一些时间。</div>");
     let url = `https://codeforces.com/api/user.info?handles=${username}`
     let timer = setTimeout(() => {
-        $("#loginstatus").html("<div class=\"alert alert-warning\"><strong>错误：</strong>登录失败，请确认 Codeforces 在您当前的网络环境下可以正常访问且帐号填写正确。</div>");
+        $("#loginstatus").html("<div class=\"alert alert-warning\"><strong>错误：</strong>登录失败，请确认 Codeforces 在您当前的网络环境下可以正常访问且帐号填写正确。<a href=\"javascript:location.reload();\" class=\"alert-link\">点击这里刷新</a>。</div>");
     }, 5000)
     $.getJSON(url, (data, status) => {
         clearInterval(timer)
