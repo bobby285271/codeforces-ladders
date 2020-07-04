@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <link rel="icon" type="image/ico" href="//bobby285271.coding.net/p/img/d/img/git/raw/master/favicon.ico">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>仪表盘 - Dasyatis</title>
+    <title>Dashboard - Dasyatis</title>
     <link rel="stylesheet" href="//cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <script src="//cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
@@ -14,7 +14,7 @@
     <script src="//cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
     <meta name="theme-color" content="#563d7c">
-    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/dasyatis.css" rel="stylesheet">
     <script src="js/public.js"></script>
 </head>
 
@@ -42,13 +42,15 @@
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
                 <br />
                 <div class="card">
+                    <center><img class="img-fluid" src="img/cf.png" alt="Codeforces"></center>
                     <div class="card-body">
-                        <h2>Dashboard</h2>
+                        <h2>Dashboard</h2><br />欢迎加入 Codeforces Ladders！
                     </div>
                 </div>
                 <br />
 
                 <div id="syncstatus"></div>
+                <div id="myInfo"></div>
                 <script src="./js/checker.js"></script>
                 <canvas id="myChart"></canvas>
                 <script src="./js/index.js"></script>
