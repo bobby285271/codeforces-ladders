@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <link rel="icon" type="image/ico" href="//bobby285271.coding.net/p/img/d/img/git/raw/master/favicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>登录 / 切换用户 - Dasyatis</title>
+    <link rel="stylesheet" href="//cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <script src="//cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdn.staticfile.org/popper.js/2.4.2/umd/popper.min.js"></script>
+    <script src="//cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="./js/login.js"></script>
+    <meta name="theme-color" content="#563d7c">
+
+    <link href="css/dashboard.css" rel="stylesheet">
+    <script src="js/public.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="../">Dasyatis · Codeforces Ladders</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <script src="js/showname.js"></script>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div id="sidebar"></div>
+            <script>
+                $("#sidebar").load("html/sidebar.html");
+            </script>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                <br />
+                <div class="card" id="accordion">
+                    <div class="card-body">
+                        <h2>登录 / 切换用户</h2><br />欢迎回来。请填写您的 Codeforces 用户信息以登录或切换用户。<a class="card-link" data-toggle="collapse" href="#collapseOne">
+                            疑难解答...
+                        </a>
+                    </div>
+                    <div id="collapseOne" class="collapse" data-parent="#accordion">
+                        <div class="card-footer">
+                            <p><span style="color: black;"><i class="fas fa-lightbulb"></i></span><b> 没有 Codeforces
+                                    帐户？</b><br /> 你可以到
+                                <a href="https://codeforces.com/register" target="_blank">Codeforces 网站</a> 进行注册，只有注册用户才可以参与
+                                <a href="https://codeforces.com/contests" target="_blank">官方比赛</a> 和 <a href="https://codeforces.com/top" target="_blank">社区讨论</a>。
+                            </p>
+                            <p><span style="color: black;"><i class="fas fa-lightbulb"></i></span><b>
+                                    我们将怎样使用你填写的信息？</b><br /> 使用 Codeforces 帐户登录以帮助我们使用 <a href="https://codeforces.com/apiHelp" target="_blank">Codeforces API</a> 同步你的记录和比赛记录。
+                                <br /> 在此处登录即默认您同意我们获取您的 Codeforces 帐户公开信息并使用 Cookie 技术储存这些信息。<br />我们承诺不会以任何方式获取你的 API keys 和帐户密码。
+                            </p>
+                            <p><span style="color: black;"><i class="fas fa-lightbulb"></i></span><b>
+                                    希望移除你的登录状态并清除相关的 Cookie？</b><br /> <button class="btn btn-danger btn-sm" style="margin-top: 3px;" onclick="delCookie('cf_username');">点击这里以注销</button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-none d-lg-block">
+                            <div class="form-inline">
+                                <i class="fas fa-user"></i>&nbsp;帐号 (Handle)：
+                                <input class="form-control" οnsubmit="return false;" id="userName_desktop" placeholder="请输入...">&nbsp;
+                                <button class="btn btn-primary" type="button" onclick="submit_desktop();">登录</button>
+                            </div>
+                        </div>
+                        <div class="d-lg-none">
+                            <div class="form">
+                                <p><i class="fas fa-user"></i>&nbsp;帐号 (Handle)：</p>
+                                <input class="form-control" οnsubmit="return false;" id="userName_mobile" placeholder="请输入...">&nbsp;
+                                <button class="btn btn-primary btn-block" type="button" onclick="submit_mobile();">登录</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <br />
+                <div id="loginstatus"></div>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -6,33 +6,16 @@
     <meta charset="utf-8">
     <link rel="icon" type="image/ico" href="//bobby285271.coding.net/p/img/d/img/git/raw/master/favicon.ico">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>仪表盘 - Dasyatis</title>
+    <title>训练指南 - Dasyatis</title>
     <link rel="stylesheet" href="//cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <script src="//cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
     <script src="//cdn.staticfile.org/popper.js/2.4.2/umd/popper.min.js"></script>
     <script src="//cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <meta name="theme-color" content="#563d7c">
-
-
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
     <!-- Custom styles for this template -->
     <link href="css/dashboard.css" rel="stylesheet">
+    <script src="js/public.js"></script>
 </head>
 
 <body>
@@ -44,7 +27,7 @@
         <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
         <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
-                <a class="nav-link" href="#">Sign out</a>
+                <script src="js/showname.js"></script>
             </li>
         </ul>
     </nav>
@@ -206,12 +189,14 @@
     </div>
 
 
-    <script src="dashboard.js"></script>
+
 </body>
 
 
 <script>
-    $("#indexpart").addClass("active");
+    setInterval(function() {
+        $("#trainingpart").addClass("active");
+    }, 100);
 </script>
 
 </html>
