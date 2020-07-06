@@ -46,7 +46,7 @@ function process(res) {
         });
         ratingColor.push(getColor(item['newRating'] || 0));
     });
-    $("#syncstatus").html("<div class=\"alert alert-success\"><strong>成功：</strong>你当前登录为 " + username + "，成功同步用户做题记录和比赛记录。</div>");
+    $("#syncstatus").html("<div class=\"alert alert-success\"><strong>成功：</strong>您当前登录为 " + username + "，成功同步用户做题记录和比赛记录。</div>");
 
     let config = {
         type: 'line',

@@ -22,7 +22,7 @@ function updatePage() {
                 $(element).parent().parent().css("background-color", "pink")
             }
         }
-        $("#syncstatus").html("<div class=\"alert alert-success\"><strong>成功：</strong>你当前登录为 " + username + "，成功同步用户做题记录。</div>");
+        $("#syncstatus").html("<div class=\"alert alert-success\"><strong>成功：</strong>您当前登录为 " + username + "，成功同步用户做题记录。</div>");
     })
 }
 
