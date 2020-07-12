@@ -10,9 +10,9 @@ function updatePage() {
         let unsolved = new Set();
         for (let item of data.result) {
             if (item.verdict == "OK") {
-                solved.add(`http://codeforces.com/problemset/problem/${item.problem.contestId}/${item.problem.index}`)
+                solved.add(`http://codeforces.ml/problemset/problem/${item.problem.contestId}/${item.problem.index}`)
             } else {
-                unsolved.add(`http://codeforces.com/problemset/problem/${item.problem.contestId}/${item.problem.index}`)
+                unsolved.add(`http://codeforces.ml/problemset/problem/${item.problem.contestId}/${item.problem.index}`)
             }
         }
         for (let element of $("td > a")) {

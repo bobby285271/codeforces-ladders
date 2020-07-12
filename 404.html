@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -6,35 +6,63 @@
     <meta charset="utf-8">
     <link rel="icon" type="image/ico" href="//bobby285271.coding.net/p/img/d/img/git/raw/master/favicon.ico">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>页面没找到 - Dasyatis</title>
+    <title>Page Not Found - Dasyatis</title>
     <link rel="stylesheet" href="//cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css">
-    <link rel="stylesheet" href="css/dasyatis.css">
     <script src="//cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
     <script src="//cdn.staticfile.org/popper.js/2.4.2/umd/popper.min.js"></script>
     <script src="//cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="./js/login.js"></script>
+    <meta name="theme-color" content="#563d7c">
+
+    <link href="css/dasyatis.css" rel="stylesheet">
+    <script src="js/public.js"></script>
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md main-navbar bg-dark navbar-dark">
-        <a class="navbar-brand" href="//www.bobby285271.top/"><i class="fa fa-home"></i> Dasyatis</a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link smooth-link" href="//www.bobby285271.top/">主站点</a></li>
-                <li class="nav-item"><a class="nav-link smooth-link" href="//start.bobby285271.top/">网址导航</a></li>
-                <li class="nav-item"><a class="nav-link smooth-link" href="//www.bobby285271.top/index.php/Archiso.html">Archiso (临时页)</a></li>
-                <li class="nav-item active"><a class="nav-link smooth-link" href="#">Codeforces
-                        Ladders</a></li>
-            </ul>
-        </div>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="./">Codeforces Ladders</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse"
+            data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <script src="js/showname.js"></script>
+            </li>
+        </ul>
     </nav>
-    <div class="hero bg-overlay" id="hero" style="background-image: url(&quot;//bobby285271.coding.net/p/img/d/img/git/raw/master/cf-ladder-index.jpg&quot;);background-size: cover; background-position: center center; background-attachment: fixed;">
-        <div class="overlay"></div>
-        <div class="offset-md-2 col-md-8 text">
-            <p class="lead lastlast">404 · 您请求的页面不存在</p>
-            <a href="//codeforces.bobby285271.top/" class="btn btn-primary">返回</a>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div id="sidebar"></div>
+            <script>
+                $("#sidebar").load("html/sidebar.html");
+            </script>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                <br />
+                <div class="card" id="accordion">
+                    <div class="d-none d-lg-block">
+                        <center><img class="img-fluid"
+                                src="//bobby285271.coding.net/p/img/d/img/git/raw/master/cf-ladder-login.jpg"
+                                alt="Codeforces"></center>
+                    </div>
+                    <div class="card-body">
+                        <h2>Page Not Found</h2><br /><a class="card-link" href="./">
+                            点击这里返回首页...
+                        </a>
+                    </div>
+
+
+
+                </div>
+                <br />
+          
+            </main>
         </div>
-    </div>
     </div>
 
 </body>
